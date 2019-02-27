@@ -1,5 +1,4 @@
 <?php
-
 /**
  *
  * Copyright MITRE 2019
