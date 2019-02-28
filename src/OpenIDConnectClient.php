@@ -413,6 +413,8 @@ class OpenIDConnectClient
         }
 
         $signout_endpoint  .= (strpos($signout_endpoint, '?') === false ? '?' : '&') . http_build_query( $signout_params, null, '&');
+        session_destroy();
+        session_unset();
         $this->redirect($signout_endpoint);
     }
 
